@@ -1,0 +1,13 @@
+1)
+SELECT *
+  FROM Products.shipping.weight
+ 
+2)
+SELECT p.description
+  FROM Products p
+  WHERE p.id = "1"
+
+3)
+SELECT p.price, p.description, p.productId
+  FROM Products p
+  ORDER BY p.price ASC
