@@ -1,8 +1,6 @@
 package com.azure.cosmos.sample.common;
 
-import java.util.Arrays;
-
-public class LastName {
+public class UniqueLastName {
     String uniqueLastName;
 
     public String getUniqueLastName() {

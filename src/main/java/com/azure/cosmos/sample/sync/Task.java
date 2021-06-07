@@ -4,7 +4,7 @@ import com.azure.cosmos.*;
 import com.azure.cosmos.models.*;
 import com.azure.cosmos.sample.common.AccountSettings;
 import com.azure.cosmos.sample.common.Family;
-import com.azure.cosmos.sample.common.LastName;
+import com.azure.cosmos.sample.common.UniqueLastName;
 import com.azure.cosmos.util.CosmosPagedIterable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -103,8 +103,8 @@ public class Task {
         CosmosQueryRequestOptions queryOptions = new CosmosQueryRequestOptions();
         queryOptions.setQueryMetricsEnabled(true);
 
-        CosmosPagedIterable<LastName> familiesPagedIterable = container.queryItems(
-                query, queryOptions, LastName.class);
+        CosmosPagedIterable<UniqueLastName> familiesPagedIterable = container.queryItems(
+                query, queryOptions, UniqueLastName.class);
 
         familiesPagedIterable.iterableByPage(50).forEach(cosmosItemPropertiesFeedResponse -> {
             System.out.printf("Got a page of query result with %s items(s) and request charge of %s%n",
@@ -119,19 +119,21 @@ public class Task {
 
     }
 
-
+    //TODO
     // Zadanie1: wyświetl wszystkie obiekty klasy Family
     private void task1() {
         String query = "TODO...";
         performQueryReturnFamily(1, query);
     }
 
+    //TODO
     // Zadanie2: wyświetl wszystkie obiekty klasy Family o nazwisku Andersen lub Wakefield
     private void task2() {
         String query = "TODO...";
         performQueryReturnFamily(2, query);
     }
 
+    //TODO
     // Zadanie3: wyświetl wszystkie obiekty klasy Family o posortowane po pierwszym Grade z tablicy childrem
     // Jeżeli children nie posiada grade lub Family nie posiada children, nie wyświetlaj dokumentu
     // wskazówka: odwołanie do grade: families.children[0].grade
@@ -141,7 +143,9 @@ public class Task {
         performQueryReturnFamily(3, query);
     }
 
-    // Zadanie4: wyświetl wszystkie unikalne nazwiska z klasy Family, wyściel je jako uniqueLastName
+    //TODO
+    // Zadanie4: wyświetl wszystkie unikalne nazwiska z klasy Family, wyściel je jako uniqueLastName,
+    // są to obiekty klasy UniqueLastName.
     private void task4() {
         String query = "SELECT uniqueLastName FROM (TODO...) AS uniqueLastName";
         performQueryReturnUniqueLastnNames(4, query);
