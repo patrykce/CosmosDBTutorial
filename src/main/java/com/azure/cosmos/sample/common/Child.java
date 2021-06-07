@@ -3,6 +3,8 @@
 
 package com.azure.cosmos.sample.common;
 
+import java.util.Arrays;
+
 public class Child {
     public String getFamilyName() {
         return familyName;
@@ -49,5 +51,16 @@ public class Child {
     private String gender;
     private int grade;
     private Pet[] pets;
+
+    @Override
+    public String toString() {
+        return "Child{" +
+                "familyName='" + familyName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", gender='" + gender + '\'' +
+                ", grade=" + grade +
+                ", pets=" + Arrays.toString(pets) +
+                '}';
+    }
 }
 

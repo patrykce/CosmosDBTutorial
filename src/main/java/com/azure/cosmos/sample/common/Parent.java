@@ -30,4 +30,12 @@ public class Parent {
 
     private String familyName;
     private String firstName;
+
+    @Override
+    public String toString() {
+        return "Parent{" +
+                "familyName='" + familyName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                '}';
+    }
 }

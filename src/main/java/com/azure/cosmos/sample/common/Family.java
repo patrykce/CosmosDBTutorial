@@ -3,6 +3,8 @@
 
 package com.azure.cosmos.sample.common;
 
+import java.util.Arrays;
+
 public class Family {
     public Family() {
     }
@@ -70,5 +72,18 @@ public class Family {
     private Child[] children;
     private Address address;
     private boolean isRegistered;
+
+    @Override
+    public String toString() {
+        return "Family{" +
+                "id='" + id + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", district='" + district + '\'' +
+                ", parents=" + Arrays.toString(parents) +
+                ", children=" + Arrays.toString(children) +
+                ", address=" + address +
+                ", isRegistered=" + isRegistered +
+                '}';
+    }
 }
 

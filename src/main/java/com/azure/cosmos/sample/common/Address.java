@@ -31,5 +31,14 @@ public class Address {
     private String state;
     private String county;
     private String city;
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "state='" + state + '\'' +
+                ", county='" + county + '\'' +
+                ", city='" + city + '\'' +
+                '}';
+    }
 }
 

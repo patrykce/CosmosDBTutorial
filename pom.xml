@@ -29,7 +29,7 @@
                     <execution>
                         <id>sync</id>
                         <configuration>
-                            <mainClass>com.azure.cosmos.sample.sync.SyncMain</mainClass>
+                            <mainClass>com.azure.cosmos.sample.sync.Populate</mainClass>
                         </configuration>
                     </execution>
                     <execution>

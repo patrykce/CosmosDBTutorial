@@ -13,4 +13,11 @@ public class Pet {
     }
 
     private String givenName;
+
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "givenName='" + givenName + '\'' +
+                '}';
+    }
 }

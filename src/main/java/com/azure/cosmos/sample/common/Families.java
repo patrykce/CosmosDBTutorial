@@ -114,4 +114,18 @@ public class Families {
 
         return andersenFamily;
     }
+
+    public static Family getAnotherSmithFamilyItem() {
+        Family andersenFamily = new Family();
+        andersenFamily.setId("Smith2-" + System.currentTimeMillis());
+        andersenFamily.setLastName("Smith");
+
+        Parent parent1 = new Parent();
+        parent1.setFirstName("John");
+
+        Parent parent2 = new Parent();
+        parent2.setFirstName("Cynthia");
+
+        return andersenFamily;
+    }
 }
